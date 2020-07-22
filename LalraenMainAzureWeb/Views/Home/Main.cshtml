@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -18,16 +17,21 @@
     </style>
 </head>
 <body>
-    <div>
-        <div class="btn btn-lg">
+    <div class="text-lg-center mt-lg-5">
+        <button class="btn btn-secondary btn-lg">
             @Html.ActionLink("Monobank", "Monobank")
-        </div>
-        <div class="btn btn-lg">
+        </button>
+        <button class="btn btn-secondary btn-lg">
             @Html.ActionLink("Electricity", "Electricity")
-        </div>
-        <div class="btn btn-lg">
+        </button>
+        <button class="btn btn-secondary btn-lg">
             @Html.ActionLink("NYI", "")
-        </div>
+        </button>
+    </div>
+    <div class="text-lg-center fixed-bottom">
+        <button class="btn btn-dark btn-lg">
+            @Html.ActionLink("Back home", "Index")
+        </button>
     </div>
 </body>
 </html>
