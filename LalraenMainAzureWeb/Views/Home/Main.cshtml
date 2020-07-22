@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Main</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        .btn a {
+            color: white;
+            text-align: center
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="btn btn-lg">
+            @Html.ActionLink("Monobank", "Monobank")
+        </div>
+        <div class="btn btn-lg">
+            @Html.ActionLink("Electricity", "Electricity")
+        </div>
+        <div class="btn btn-lg">
+            @Html.ActionLink("NYI", "")
+        </div>
+    </div>
+</body>
+</html>
