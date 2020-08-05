@@ -11,7 +11,7 @@ namespace LalraenMainAzureWeb.Controllers
         // GET: ElectricityPayment
         public ActionResult Index()
         {
-
+            
             return View();
         }
     }
