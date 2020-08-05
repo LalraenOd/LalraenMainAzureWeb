@@ -9,6 +9,10 @@ namespace LalraenMainAzureWeb.Controllers
         {
             return View();
         }
+        public ActionResult Main()
+        {
+            return View();
+        }
 
         public ViewResult LoginForm()
         {
@@ -16,11 +20,6 @@ namespace LalraenMainAzureWeb.Controllers
         }
 
         public ViewResult SignupForm()
-        {
-            return View();
-        }
-
-        public ActionResult Main()
         {
             return View();
         }
