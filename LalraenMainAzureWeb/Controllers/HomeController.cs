@@ -23,5 +23,10 @@ namespace LalraenMainAzureWeb.Controllers
         {
             return View();
         }
+        public RedirectResult RedirectDonate()
+        {
+            return Redirect("https://send.monobank.ua/45CJRjVgEC");
+        }
+
     }
 }
