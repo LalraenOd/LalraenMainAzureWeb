@@ -11,7 +11,13 @@ namespace LalraenMainAzureWeb.Controllers
         // GET: ElectricityPayment
         public ActionResult Index()
         {
-            
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Calculate(int meterLastReadings, int meterCurrentReading)
+        {
+            ElectricityPayment.ElectricityPayment.ElecSum(meterLastReadings, meterCurrentReading);
             return View();
         }
     }

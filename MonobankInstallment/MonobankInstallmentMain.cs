@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MonobankInstallment
+﻿namespace MonobankInstallment
 {
     public class MonobankInstallmentMain
     {
-        public static double installPercent = 1.9/100;
+        public static double installPercent = 1.9 / 100;
         public static double installSumPerMonth;
         public static double installFinalSum;
         public static double installOverPayment;
