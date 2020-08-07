@@ -9,6 +9,7 @@ namespace LalraenMainAzureWeb.Controllers
         {
             return View();
         }
+
         public ActionResult Main()
         {
             return View();
@@ -23,10 +24,12 @@ namespace LalraenMainAzureWeb.Controllers
         {
             return View();
         }
+
         public RedirectResult RedirectDonate()
         {
             return Redirect("https://send.monobank.ua/45CJRjVgEC");
         }
+
         public RedirectResult RedirectGitHub()
         {
             return Redirect("https://github.com/lalraenod");
