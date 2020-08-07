@@ -11,12 +11,13 @@
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="text-lg-center mt-lg-5">
-        <button class="btn btn-secondary btn-lg">
-            @Html.ActionLink("Monobank (WIP)", "Monobank")
+    <h1 class="text-center mt-3"><strong>Main page</strong></h1>
+    <div class="text-lg-center mt-3">
+        <button class="btn btn-primary btn-lg">
+            @Html.ActionLink("Monobank", "MonobankMain", "MonobankInstallment")
         </button>
-        <button class="btn btn-secondary btn-lg">
-            @Html.ActionLink("Electricity (WIP)", "Electricity")
+        <button class="btn btn-primary btn-lg">
+            @Html.ActionLink("Electricity", "ElectricityMain", "ElectricityPayment")
         </button>
         <button class="btn btn-secondary btn-lg">
             @Html.ActionLink("EdrpoyParser (NYI)", "Main")
@@ -27,50 +28,16 @@
             @Html.ActionLink("(NYI)", "Main")
         </button>
         <button class="btn btn-secondary btn-lg">
-            @Html.ActionLink("(NYI)", "Main")
+            @Html.ActionLink("PC's info (NYI)", "Main")
         </button>
-        <button class="btn btn-secondary btn-lg">
-            @Html.ActionLink("GitHub (NYI)", "Main")
+        <button class="btn btn-primary btn-lg">
+            @Html.ActionLink("GitHub", "RedirectGitHub")
         </button>
     </div>    
     <div class="text-lg-center mt-3">
         <button class="btn btn-success btn-lg">
             @Html.ActionLink("Donate", "RedirectDonate")
         </button>
-    </div>
-    <div class="gsInformer text-lg-center">
-        <!-- Gismeteo informer START -->
-        <link rel="stylesheet" type="text/css" href="https://www.gismeteo.ua/assets/flat-ui/legacy/css/informer.min.css">
-        <div id="gsInformerID-80fMV675As8wI5" class="gsInformer" style="width:240px;height:251px">
-            <div class="gsIContent">
-                <div id="cityLink">
-                    <a href="https://www.gismeteo.com/weather-odesa-14413/" target="_blank" title="Weather in Odesa">
-                        <img src="https://www.gismeteo.ua/assets/flat-ui/img/gisloader.svg" width="24" height="24" alt="Weather in Odesa">
-                    </a>
-                </div>
-                <div class="gsLinks">
-                    <table>
-                        <tr>
-                            <td>
-                                <div class="leftCol">
-                                    <a href="https://www.gismeteo.com/" target="_blank" title="Weather">
-                                        <img alt="Weather" src="https://www.gismeteo.ua/assets/flat-ui/img/logo-mini2.png" align="middle" border="0" width="11" height="16" />
-                                        <img src="https://www.gismeteo.ua/assets/flat-ui/img/informer/gismeteo.svg" border="0" align="middle" style="left: 5px; top:1px">
-                                    </a>
-                                </div>
-                                <div class="rightCol">
-                                    <a href="https://www.gismeteo.com/weather-odesa-14413/2-weeks/" target="_blank" title="Weather in Odesa for 2-week forecast">
-                                        <img src="https://www.gismeteo.ua/assets/flat-ui/img/informer/forecast-2weeks.en.svg" border="0" align="middle" style="top:auto" alt="Weather in Odesa for 2-week forecast">
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <script async src="https://www.gismeteo.ua/api/informer/getinformer/?hash=80fMV675As8wI5"></script>
-        <!-- Gismeteo informer END -->
     </div>
     <div class="text-lg-center fixed-bottom">
         <button class="btn btn-danger btn-lg mb-lg-5">

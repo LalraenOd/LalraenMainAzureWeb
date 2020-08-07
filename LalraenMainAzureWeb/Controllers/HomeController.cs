@@ -27,6 +27,9 @@ namespace LalraenMainAzureWeb.Controllers
         {
             return Redirect("https://send.monobank.ua/45CJRjVgEC");
         }
-
+        public RedirectResult RedirectGitHub()
+        {
+            return Redirect("https://github.com/lalraenod");
+        }
     }
 }

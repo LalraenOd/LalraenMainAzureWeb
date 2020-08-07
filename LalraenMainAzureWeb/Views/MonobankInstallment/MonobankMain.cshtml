@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Monobank installment calculation</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <h1 class="text-center"><strong>Calculate your Monobank installment payment here</strong></h1>
+    <div class="text-lg-center mt-lg-5">
+        <label for="InstallmentSum">Enter summary of your installment:</label>
+        <input class="text-center" id="InstallmentSum" type="text" placeholder="1000" size="5" />
+    </div>
+    <div class="text-lg-center">
+        <label for="InstallmentDuration">Select installment duration (from 3 to 24 months):</label>
+        <input class="text-center" id="InstallmentDuration" type="text" placeholder="3" size="5" />
+    </div>
+    <div class="text-lg-center">
+        <label for="InstallmentPercent">InstallmentPercent:</label>
+        <input class="text-center" id="InstallmentPercent" type="text" value="1,9" size="5" /> %
+    </div>
+    <div class="text-lg-center mt-3">
+        <button class="btn btn-success btn-lg">Calculate</button>
+    </div>
+    <div class="text-lg-center invisible">
+        <label for="installSumPerMonth"></label>
+        <p>Sum to pay each month: <output name="installSumPerMonth"></output></p>
+    </div>
+    <div class="text-lg-center invisible">
+        <label for="installFinalSum"></label>
+        <p>All sum to pay: <output name="installFinalSum"></output></p>
+    </div>
+    <div class="text-lg-center invisible">
+        <label for="installOverPayment"></label>
+        <p>Overpayment: <output name="installOverPayment"></output></p>
+    </div>
+    <div class="text-lg-center fixed-bottom">
+        <button class="btn btn-danger btn-lg mb-lg-5">
+            @Html.ActionLink("Main", "Main", "Home")
+        </button>
+    </div>
+</body>
+</html>
