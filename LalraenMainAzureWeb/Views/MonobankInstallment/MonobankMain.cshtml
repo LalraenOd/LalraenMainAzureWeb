@@ -1,4 +1,6 @@
-﻿@{
+﻿@model LalraenMainAzureWeb.Models.InstallmentModel
+
+@{
     Layout = null;
 }
 
@@ -29,15 +31,15 @@
     </div>
     <div id="installSumPerMonth" class="text-lg-center invisible">
         <label for="installSumPerMonth"></label>
-        <p>Sum to pay each month: <output name="installSumPerMonth"></output></p>
+        <p>Sum to pay each month: <output name="InstallSumPerMonth"></output></p>
     </div>
     <div id="installFinalSum" class="text-lg-center invisible">
         <label for="installFinalSum"></label>
-        <p>All sum to pay: <output name="installFinalSum"></output></p>
+        <p>All sum to pay: <output name="InstallFinalSum"></output></p>
     </div>
     <div id="installOverPayment" class="text-lg-center invisible">
         <label for="installOverPayment"></label>
-        <p>Overpayment: <output name="installOverPayment"></output></p>
+        <p>Overpayment: <output name="InstallOverPayment"></output></p>
     </div>
     <div class="text-lg-center fixed-bottom">
         <button class="btn btn-danger btn-lg mb-lg-5">

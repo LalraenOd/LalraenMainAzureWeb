@@ -1,4 +1,6 @@
-﻿@{
+﻿@model LalraenMainAzureWeb.Models.MeterModel
+
+@{
     Layout = null;
 }
 
@@ -12,14 +14,17 @@
 </head>
 <body>
     <h1 class="text-center"><strong>Calculate your electricity payment here</strong></h1>
-    <div class="text-lg-center mt-lg-5">
-        <label for="LastReadings">Enter last meter readings:</label>
-        <input class="text-center" id="LastReadings" type="text" placeholder="1000" size="5" />
-    </div>
-    <div class="text-lg-center">
-        <label for="CurrentReadings">Enter current meter readings:</label>
-        <input class="text-center" id="CurrentReadings" type="text" placeholder="1200" size="5" />
-    </div>
+    @using (Html.BeginForm("Calculate", "ElectricityPayment", FormMethod.Post))
+    {
+        <div class="text-lg-center mt-lg-5">
+            <label for="LastReadings">Enter last meter readings:</label>
+            <input class="text-center" id="LastReadings" type="text" placeholder="1000" size="5" />
+        </div>
+        <div class="text-lg-center">
+            <label for="CurrentReadings">Enter current meter readings:</label>
+            <input class="text-center" id="CurrentReadings" type="text" placeholder="1200" size="5" />
+        </div>
+    }
     <div class="text-lg-center mt-3">
         <button class="btn btn-success btn-lg">Calculate</button>
     </div>

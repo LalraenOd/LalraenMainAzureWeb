@@ -10,12 +10,10 @@ namespace LalraenMainAzureWeb.Controllers
             return View();
         }
 
-        [HttpGet]
-        public ActionResult Calculate(int meterLastReadings, int meterCurrentReading)
+        [HttpPost]
+        public ActionResult Calculate()
         {
-            double sumToPay = ElectricityPayment.ElectricityPayment.ElecSum(meterLastReadings, meterCurrentReading);
-
-            return ViewBag(sumToPay);
+            return ViewBag();
         }
     }
 }
