@@ -7,17 +7,17 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Main</title>
+    <title>Main page</title>
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
-    <h1 class="text-center mt-3"><strong>Main page</strong></h1>
+    <h1 class="text-center mt-3"><strong>Lalraen's APPs</strong></h1>
     <div class="text-lg-center mt-3">
         <button class="btn btn-primary btn-lg">
-            @Html.ActionLink("Monobank", "MonobankMain", "MonobankInstallment")
+            @Html.ActionLink("Monobank(WIP)", "MonobankMain")
         </button>
         <button class="btn btn-primary btn-lg">
-            @Html.ActionLink("Electricity", "ElectricityMain", "ElectricityPayment")
+            @Html.ActionLink("Electricity(WIP)", "ElectricityMain")
         </button>
         <button class="btn btn-secondary btn-lg">
             @Html.ActionLink("EdrpoyParser (NYI)", "Main")
@@ -25,22 +25,25 @@
     </div>
     <div class="text-lg-center mt-3">
         <button class="btn btn-secondary btn-lg">
-            @Html.ActionLink("(NYI)", "Main")
-        </button>
-        <button class="btn btn-secondary btn-lg">
-            @Html.ActionLink("PC's info (NYI)", "Main")
+            @Html.ActionLink("PC's info (NYI)", "PcInfo")
         </button>
         <button class="btn btn-primary btn-lg">
             @Html.ActionLink("GitHub", "RedirectGitHub")
         </button>
     </div>
     <div class="text-lg-center mt-3">
+        <button class="btn btn-secondary btn-lg">
+            @Html.ActionLink("MoneyControl(NYI)", "Main")
+        </button>
+        <button class="btn btn-secondary btn-lg">
+            @Html.ActionLink("Shopping List(NYI)", "Main")
+        </button>
+    </div>
+    <div class="text-lg-center fixed-bottom mt-lg-5">
         <button class="btn btn-success btn-lg">
             @Html.ActionLink("Donate", "RedirectDonate")
         </button>
-    </div>
-    <div class="text-lg-center fixed-bottom">
-        <button class="btn btn-danger btn-lg mb-lg-5">
+        <button class="btn btn-danger btn-lg">
             @Html.ActionLink("Main", "Main")
         </button>
     </div>

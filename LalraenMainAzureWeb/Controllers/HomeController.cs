@@ -34,5 +34,17 @@ namespace LalraenMainAzureWeb.Controllers
         {
             return Redirect("https://github.com/lalraenod");
         }
+
+        // GET: ElectricityPayment
+        public ActionResult ElectricityMain()
+        {
+            return View();
+        }
+
+        // GET: MonobankInstallment
+        public ActionResult MonobankMain()
+        {
+            return View();
+        }
     }
 }
