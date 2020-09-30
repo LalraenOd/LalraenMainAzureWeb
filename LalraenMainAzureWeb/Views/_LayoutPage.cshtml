@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+    <div class="text-lg-center fixed-bottom mt-lg-5">
+        <button class="btn btn-success btn-lg">
+            @Html.ActionLink("Donate", "RedirectDonate")
+        </button>
+        <button class="btn btn-danger btn-lg">
+            @Html.ActionLink("Main", "Main", "Home")
+        </button>
+    </div>
+</body>
+</html>

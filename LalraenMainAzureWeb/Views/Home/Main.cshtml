@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = null;
+    Layout = "~/Views/_LayoutPage.cshtml";
 }
 
 <!DOCTYPE html>
@@ -14,6 +14,7 @@
     <h1 class="text-center mt-3"><strong>Lalraen's APPs</strong></h1>
     <div class="text-lg-center mt-3">
         <button class="btn btn-primary btn-lg">
+            <img src="" />
             @Html.ActionLink("Monobank(WIP)", "Monobank", "Monobank")
         </button>
         <button class="btn btn-primary btn-lg">
@@ -37,14 +38,6 @@
         </button>
         <button class="btn btn-secondary btn-lg">
             @Html.ActionLink("Shopping List(NYI)", "Main")
-        </button>
-    </div>
-    <div class="text-lg-center fixed-bottom mt-lg-5">
-        <button class="btn btn-success btn-lg">
-            @Html.ActionLink("Donate", "RedirectDonate")
-        </button>
-        <button class="btn btn-danger btn-lg">
-            @Html.ActionLink("Main", "Main")
         </button>
     </div>
 </body>

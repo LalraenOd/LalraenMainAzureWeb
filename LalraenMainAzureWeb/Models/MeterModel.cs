@@ -9,8 +9,8 @@
             SumToPay = sumToPay;
         }
 
-        private int LastMeters { get; set; }
-        private int CurrentMeters { get; set; }
-        private int SumToPay { get; set; }
+        public int LastMeters { get; set; }
+        public int CurrentMeters { get; set; }
+        public double SumToPay { get; set; }
     }
 }

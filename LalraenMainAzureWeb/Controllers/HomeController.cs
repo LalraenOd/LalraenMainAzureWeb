@@ -15,16 +15,6 @@ namespace LalraenMainAzureWeb.Controllers
             return View();
         }
 
-        public ViewResult LoginForm()
-        {
-            return View();
-        }
-
-        public ViewResult SignupForm()
-        {
-            return View();
-        }
-
         public RedirectResult RedirectDonate()
         {
             return Redirect("https://send.monobank.ua/45CJRjVgEC");
@@ -33,18 +23,6 @@ namespace LalraenMainAzureWeb.Controllers
         public RedirectResult RedirectGitHub()
         {
             return Redirect("https://github.com/lalraenod");
-        }
-
-        // GET: ElectricityPayment
-        public ActionResult ElectricityMain()
-        {
-            return View();
-        }
-
-        // GET: MonobankInstallment
-        public ActionResult MonobankMain()
-        {
-            return View();
         }
     }
 }

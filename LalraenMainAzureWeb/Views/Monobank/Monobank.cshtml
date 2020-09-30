@@ -1,7 +1,7 @@
 ﻿@model LalraenMainAzureWeb.Models.InstallmentModel
 
 @{
-    Layout = null;
+    Layout = "~/Views/_LayoutPage.cshtml";
 }
 
 <!DOCTYPE html>
@@ -40,11 +40,6 @@
     <div id="installOverPayment" class="text-lg-center invisible">
         <label for="installOverPayment"></label>
         <p>Overpayment: <output name="InstallOverPayment"></output></p>
-    </div>
-    <div class="text-lg-center fixed-bottom">
-        <button class="btn btn-danger btn-lg mb-lg-5">
-            @Html.ActionLink("Main", "Main", "Home")
-        </button>
     </div>
 </body>
 </html>
