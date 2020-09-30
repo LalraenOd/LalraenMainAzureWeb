@@ -201,13 +201,17 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Web.config" />
-    <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Home\Signup.cshtml" />
     <Content Include="Views\Home\Main.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\EdrpouParserController.cs" />
+    <Compile Include="Controllers\ElectricityController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ListsController.cs" />
+    <Compile Include="Controllers\MoneyControlController.cs" />
+    <Compile Include="Controllers\MonobankController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -231,8 +235,9 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Home\ElectricityMain.cshtml" />
-    <Content Include="Views\Home\MonobankMain.cshtml" />
+    <Content Include="Views\Electricity\Electricity.cshtml" />
+    <Content Include="Views\Monobank\Monobank.cshtml" />
+    <Content Include="Views\Auth\AuthMain.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -242,6 +247,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\EdrpouParser\" />
+    <Folder Include="Views\Lists\" />
+    <Folder Include="Views\MoneyControl\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

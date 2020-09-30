@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div> 
+        <table class="m-auto">
+            <td>
+                <div class="text-center m-lg-5">
+                    <h1>Login Form</h1>
+                </div>
+                <div class="m-center">
+                    <label for="email">E-mail:</label>
+                    <input class="text-center" id="email" type="text" size="20" />
+                </div>
+                <div class="m-center">
+                    <label for="password">Password:</label>
+                    <input class="text-center" id="password" type="text" size="20" />
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary btn-lg" type="button">
+                        @Html.ActionLink("Login", "Main")
+                    </button>
+                </div>
+            </td>
+            <td>
+                <div class="text-center m-lg-5">
+                    <h1>SignUp Form</h1>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary btn-lg" type="button">
+                        @Html.ActionLink("SignUp", "Main")
+                    </button>
+                </div>
+            </td>
+        </table>
+    </div>
+</body>
+</html>
