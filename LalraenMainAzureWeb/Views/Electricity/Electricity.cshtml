@@ -33,11 +33,11 @@
             </div>
             <div>
                 @Html.LabelFor(m => m.RateLess100, new { @class = "" })
-                @Html.TextBoxFor(m => m.RateLess100, new { @class = "form-control text-center", @Value = "0,9" })
+                @Html.TextBoxFor(m => m.RateLess100, new { @class = "form-control text-center", Value = "0.9" })
             </div>
             <div>
                 @Html.LabelFor(m => m.RateMore100, new { @class = "" })
-                @Html.TextBoxFor(m => m.RateMore100, new { @class = "form-control text-center", @Value = "1,68" })
+                @Html.TextBoxFor(m => m.RateMore100, new { @class = "form-control text-center", Value = "1.68" })
             </div>
             <input type="submit" class="btn btn-success" value="Calculate" />
         </div>

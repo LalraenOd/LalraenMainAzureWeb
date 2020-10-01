@@ -17,7 +17,7 @@ namespace LalraenMainAzureWeb.Controllers
         public ActionResult Monobank(InstallmentModel installmentModel)
         {
             installmentModel.SumPerMonth = Math.Round((installmentModel.Sum / installmentModel.Duration)
-                + (installmentModel.Sum * (installmentModel.Percent / 100)));
+                + (installmentModel.Sum * (installmentModel.Percent / 100)), 2);
             installmentModel.FinalSum = installmentModel.SumPerMonth * installmentModel.Duration;
             installmentModel.OverPayment = installmentModel.FinalSum - installmentModel.Sum;
             return View(installmentModel);

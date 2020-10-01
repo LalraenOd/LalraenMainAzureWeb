@@ -5,10 +5,6 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LalraenMainAzureWeb", "LalraenMainAzureWeb\LalraenMainAzureWeb.csproj", "{2EBB7698-640F-4A0E-8660-B89BAF5FD203}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyControl", "MoneyControl\MoneyControl.csproj", "{3B807481-FDF6-4D15-B377-AF19597807DF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingList", "ShoppingList\ShoppingList.csproj", "{EC2D7F5E-AB08-496B-B9EF-57BE10CB1925}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{2EBB7698-640F-4A0E-8660-B89BAF5FD203}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EBB7698-640F-4A0E-8660-B89BAF5FD203}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EBB7698-640F-4A0E-8660-B89BAF5FD203}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3B807481-FDF6-4D15-B377-AF19597807DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B807481-FDF6-4D15-B377-AF19597807DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B807481-FDF6-4D15-B377-AF19597807DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B807481-FDF6-4D15-B377-AF19597807DF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EC2D7F5E-AB08-496B-B9EF-57BE10CB1925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC2D7F5E-AB08-496B-B9EF-57BE10CB1925}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC2D7F5E-AB08-496B-B9EF-57BE10CB1925}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC2D7F5E-AB08-496B-B9EF-57BE10CB1925}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
