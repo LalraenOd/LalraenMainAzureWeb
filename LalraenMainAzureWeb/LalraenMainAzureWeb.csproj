@@ -217,6 +217,7 @@
     </Compile>
     <Compile Include="Models\InstallmentModel.cs" />
     <Compile Include="Models\MeterModel.cs" />
+    <Compile Include="Models\OrganisationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
