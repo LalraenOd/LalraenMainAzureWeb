@@ -1,6 +1,7 @@
 ﻿@model LalraenMainAzureWeb.Models.InstallmentModel
 
 @{
+    ViewBag.Title = "Monobank Installment";
     Layout = "~/Views/_LayoutPage.cshtml";
 }
 
@@ -11,35 +12,48 @@
     <meta name="viewport" content="width=device-width" />
     <title>Monobank installment calculation</title>
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        .form-control {
+            width: auto;
+        }
+    </style>
 </head>
 <body>
-    <h1 class="text-center"><strong>Calculate your Monobank installment payment here</strong></h1>
-    <div class="text-lg-center mt-lg-5">
-        <label for="InstallmentSum">Enter summary of your installment:</label>
-        <input class="text-center" id="InstallmentSum" type="text" placeholder="1000" size="5" />
-    </div>
-    <div class="text-lg-center">
-        <label for="InstallmentDuration">Select installment duration (from 3 to 24 months):</label>
-        <input class="text-center" id="InstallmentDuration" type="text" placeholder="3" size="5" />
-    </div>
-    <div class="text-lg-center">
-        <label for="InstallmentPercent">InstallmentPercent:</label>
-        <input class="text-center" id="InstallmentPercent" type="text" value="1,9" size="5" /> %
-    </div>
-    <div class="text-lg-center mt-3">
-        <button class="btn btn-success btn-lg">Calculate</button>
-    </div>
-    <div id="installSumPerMonth" class="text-lg-center invisible">
-        <label for="installSumPerMonth"></label>
-        <p>Sum to pay each month: <output name="InstallSumPerMonth"></output></p>
-    </div>
-    <div id="installFinalSum" class="text-lg-center invisible">
-        <label for="installFinalSum"></label>
-        <p>All sum to pay: <output name="InstallFinalSum"></output></p>
-    </div>
-    <div id="installOverPayment" class="text-lg-center invisible">
-        <label for="installOverPayment"></label>
-        <p>Overpayment: <output name="InstallOverPayment"></output></p>
-    </div>
+    <h1 class="text-center mt-3"><strong>Calculate your Monobank installment payment here</strong></h1>
+    @using (Html.BeginForm("Monobank", "Monobank", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="text-center">
+            <div>
+                @Html.LabelFor(m => m.Sum, new { @class = "" })
+                @Html.TextBoxFor(m => m.Sum, new { @class = "form-control text-center" })
+            </div>
+            <div>
+                @Html.LabelFor(m => m.Duration, new { @class = "" })
+                @Html.TextBoxFor(m => m.Duration, new { @class = "form-control text-center" })
+            </div>
+            <div>
+                @Html.LabelFor(m => m.Percent, new { @class = "" })
+                @Html.TextBoxFor(m => m.Percent, new { @class = "form-control text-center", @Value = "1,9" })
+            </div>
+            <input type="submit" class="btn btn-success" value="Calculate Payment" />
+        </div>
+    }
+    @using (Html.BeginForm("Monobank", "Monobank", FormMethod.Get, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="text-center mt-lg-5">
+            <div>
+                @Html.LabelFor(m => m.SumPerMonth, new { @class = "" })
+                @Html.TextBoxFor(m => m.SumPerMonth, new { @class = "form-control text-center" })
+            </div>
+            <div>
+                @Html.LabelFor(m => m.OverPayment, new { @class = "" })
+                @Html.TextBoxFor(m => m.OverPayment, new { @class = "form-control text-center" })
+            </div>
+            <div>
+                @Html.LabelFor(m => m.FinalSum, new { @class = "" })
+                @Html.TextBoxFor(m => m.FinalSum, new { @class = "form-control text-center" })
+            </div>
+        </div>
+    }
 </body>
 </html>

@@ -1,6 +1,7 @@
 ﻿@model LalraenMainAzureWeb.Models.MeterModel
 
 @{
+    ViewBag.Title = "Electricity Payment";
     Layout = "~/Views/_LayoutPage.cshtml";
 }
 
@@ -11,27 +12,47 @@
     <meta name="viewport" content="width=device-width" />
     <title>Electricity payment calculation</title>
     <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <style>
+        .form-control {
+            width: auto;
+        }
+    </style>
 </head>
 <body>
-    <h1 class="text-center"><strong>Calculate your electricity payment here</strong></h1>
-    @using (Html.BeginForm("Calculate", "Electricity", FormMethod.Post))
-    { 
-        <div class="text-lg-center mt-lg-5">
-            <label for="LastMeters">Enter last meter readings:</label>
-            <input class="text-center" id="LastMeters" type="number" placeholder="1000" size="5" />
+    <h1 class="text-center mt-3"><strong>Calculate your electricity payment here</strong></h1>
+    @using (Html.BeginForm("Electricity", "Electricity", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="text-center">
+            <div>
+                @Html.LabelFor(m => m.LastMeters, new { @class = "" })
+                @Html.TextBoxFor(m => m.LastMeters, new { @class = "form-control text-center" })
+            </div>
+            <div>
+                @Html.LabelFor(m => m.CurrentMeters, new { @class = "" })
+                @Html.TextBoxFor(m => m.CurrentMeters, new { @class = "form-control text-center" })
+            </div>
+            <div>
+                @Html.LabelFor(m => m.RateLess100, new { @class = "" })
+                @Html.TextBoxFor(m => m.RateLess100, new { @class = "form-control text-center", @Value = "0,9" })
+            </div>
+            <div>
+                @Html.LabelFor(m => m.RateMore100, new { @class = "" })
+                @Html.TextBoxFor(m => m.RateMore100, new { @class = "form-control text-center", @Value = "1,68" })
+            </div>
+            <input type="submit" class="btn btn-success" value="Calculate" />
         </div>
-        <div class="text-lg-center">
-            <label for="CurrentMeters">Enter current meter readings:</label>
-            <input class="text-center" id="CurrentMeters" type="number" placeholder="1200" size="5" />
-        </div>
-        <div class="text-lg-center mt-3">
-            <button class="btn btn-success btn-lg">Calculate</button>
-        </div>
-        <div class="text-lg-center">
-            <label for="Sum to pay"></label>
-            <p>Sum in UAH to pay: 
-            <output name="sumToPay" id="sumToPay"></output>
-            </p>
+    }
+    @using (Html.BeginForm("Electricity", "Electricity", FormMethod.Get, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="mt-lg-3 text-center">
+            <div>
+                @Html.LabelFor(m => m.MetersDifference, new { @class = "" })
+                @Html.TextBoxFor(m => m.MetersDifference, new { @class = "form-control text-center", @readonly = "readonly" })
+            </div>
+            <div>
+                @Html.LabelFor(m => m.SumToPay, new { @class = "" })
+                @Html.TextBoxFor(m => m.SumToPay, new { @class = "form-control text-center", @readonly = "readonly" })
+            </div>
         </div>
     }
 </body>

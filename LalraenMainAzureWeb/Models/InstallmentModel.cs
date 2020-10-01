@@ -2,22 +2,11 @@
 {
     public class InstallmentModel
     {
-        public InstallmentModel(float installmentSum, float installmentDuration, float installmentPercent,
-            float installSumPerMonth, float installFinalSum, float installOverPayment)
-        {
-            InstallmentSum = installmentSum;
-            InstallmentDuration = installmentDuration;
-            InstallmentPercent = installmentPercent;
-            InstallSumPerMonth = installSumPerMonth;
-            InstallFinalSum = installFinalSum;
-            InstallOverPayment = installOverPayment;
-        }
-
-        private float InstallmentSum { get; set; }
-        private float InstallmentDuration { get; set; }
-        private float InstallmentPercent { get; set; }
-        private float InstallSumPerMonth { get; set; }
-        private float InstallFinalSum { get; set; }
-        private float InstallOverPayment { get; set; }
+        public double Sum { get; set; }
+        public double Duration { get; set; }
+        public double Percent { get; set; } //= 1.9;
+        public double SumPerMonth { get; set; }
+        public double FinalSum { get; set; }
+        public double OverPayment { get; set; }
     }
 }

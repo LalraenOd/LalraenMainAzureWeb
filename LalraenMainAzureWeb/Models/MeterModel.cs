@@ -2,15 +2,21 @@
 {
     public class MeterModel
     {
-        public MeterModel(int lastMeters, int currentMeters, int sumToPay)
+        public MeterModel()
+        {
+        }
+
+        public MeterModel(int lastMeters, int currentMeters)
         {
             LastMeters = lastMeters;
             CurrentMeters = currentMeters;
-            SumToPay = sumToPay;
         }
 
         public int LastMeters { get; set; }
         public int CurrentMeters { get; set; }
+        public int MetersDifference { get; set; }
+        public double RateLess100 { get; set; }//= 0.9;
+        public double RateMore100 { get; set; }//= 1.68;
         public double SumToPay { get; set; }
     }
 }

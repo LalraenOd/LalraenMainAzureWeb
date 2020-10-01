@@ -259,16 +259,6 @@
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ElectricityPayment\ElectricityPayment.csproj">
-      <Project>{93842268-cc57-4afe-9831-e6b249563669}</Project>
-      <Name>ElectricityPayment</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MonobankInstallment\MonobankInstallment.csproj">
-      <Project>{f0dfcd7f-5afd-4994-b535-e13b8c860a31}</Project>
-      <Name>MonobankInstallment</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
