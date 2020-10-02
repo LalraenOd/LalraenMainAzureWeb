@@ -1,5 +1,5 @@
 /*!
-  * Bootstrap v4.5.1 (https://getbootstrap.com/)
+  * Bootstrap v4.5.2 (https://getbootstrap.com/)
   * Copyright 2011-2020 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -54,7 +54,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.5.1): util.js
+   * Bootstrap (v4.5.2): util.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -115,6 +115,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   var Util = {
     TRANSITION_END: 'bsTransitionEnd',
     getUID: function getUID(prefix) {
@@ -144,6 +145,7 @@
         return 0;
       } // Get transition-duration of the element
 
+
       var transitionDuration = $(element).css('transition-duration');
       var transitionDelay = $(element).css('transition-delay');
       var floatTransitionDuration = parseFloat(transitionDuration);
@@ -152,6 +154,7 @@
       if (!floatTransitionDuration && !floatTransitionDelay) {
         return 0;
       } // If multiple durations are defined, take the first
+
 
       transitionDuration = transitionDuration.split(',')[0];
       transitionDelay = transitionDelay.split(',')[0];
@@ -188,6 +191,7 @@
         return null;
       } // Can find the shadow root otherwise it'll return the document
 
+
       if (typeof element.getRootNode === 'function') {
         var root = element.getRootNode();
         return root instanceof ShadowRoot ? root : null;
@@ -196,6 +200,7 @@
       if (element instanceof ShadowRoot) {
         return element;
       } // when we don't find a shadow root
+
 
       if (!element.parentNode) {
         return null;
@@ -230,7 +235,7 @@
    */
 
   var NAME = 'alert';
-  var VERSION = '4.5.1';
+  var VERSION = '4.5.2';
   var DATA_KEY = 'bs.alert';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -252,6 +257,7 @@
     function Alert(element) {
       this._element = element;
     } // Getters
+
 
     var _proto = Alert.prototype;
 
@@ -362,6 +368,7 @@
    * ------------------------------------------------------------------------
    */
 
+
   $(document).on(EVENT_CLICK_DATA_API, SELECTOR_DISMISS, Alert._handleDismiss(new Alert()));
   /**
    * ------------------------------------------------------------------------
@@ -384,7 +391,7 @@
    */
 
   var NAME$1 = 'button';
-  var VERSION$1 = '4.5.1';
+  var VERSION$1 = '4.5.2';
   var DATA_KEY$1 = 'bs.button';
   var EVENT_KEY$1 = "." + DATA_KEY$1;
   var DATA_API_KEY$1 = '.data-api';
@@ -412,6 +419,7 @@
     function Button(element) {
       this._element = element;
     } // Getters
+
 
     var _proto = Button.prototype;
 
@@ -498,6 +506,7 @@
    * ------------------------------------------------------------------------
    */
 
+
   $(document).on(EVENT_CLICK_DATA_API$1, SELECTOR_DATA_TOGGLE_CARROT, function (event) {
     var button = event.target;
     var initialButton = button;
@@ -541,6 +550,7 @@
       }
     } // find all button toggles
 
+
     buttons = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLE));
 
     for (var _i = 0, _len = buttons.length; _i < _len; _i++) {
@@ -574,7 +584,7 @@
    */
 
   var NAME$2 = 'carousel';
-  var VERSION$2 = '4.5.1';
+  var VERSION$2 = '4.5.2';
   var DATA_KEY$2 = 'bs.carousel';
   var EVENT_KEY$2 = "." + DATA_KEY$2;
   var DATA_API_KEY$2 = '.data-api';
@@ -663,6 +673,7 @@
 
       this._addEventListeners();
     } // Getters
+
 
     var _proto = Carousel.prototype;
 
@@ -778,6 +789,7 @@
       if (direction > 0) {
         this.prev();
       } // swipe right
+
 
       if (direction < 0) {
         this.next();
@@ -1127,6 +1139,7 @@
    * ------------------------------------------------------------------------
    */
 
+
   $(document).on(EVENT_CLICK_DATA_API$2, SELECTOR_DATA_SLIDE, Carousel._dataApiClickHandler);
   $(window).on(EVENT_LOAD_DATA_API$1, function () {
     var carousels = [].slice.call(document.querySelectorAll(SELECTOR_DATA_RIDE));
@@ -1158,7 +1171,7 @@
    */
 
   var NAME$3 = 'collapse';
-  var VERSION$3 = '4.5.1';
+  var VERSION$3 = '4.5.2';
   var DATA_KEY$3 = 'bs.collapse';
   var EVENT_KEY$3 = "." + DATA_KEY$3;
   var DATA_API_KEY$3 = '.data-api';
@@ -1222,6 +1235,7 @@
         this.toggle();
       }
     } // Getters
+
 
     var _proto = Collapse.prototype;
 
@@ -1467,6 +1481,7 @@
    * ------------------------------------------------------------------------
    */
 
+
   $(document).on(EVENT_CLICK_DATA_API$3, SELECTOR_DATA_TOGGLE$1, function (event) {
     // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
     if (event.currentTarget.tagName === 'A') {
@@ -1505,7 +1520,7 @@
    */
 
   var NAME$4 = 'dropdown';
-  var VERSION$4 = '4.5.1';
+  var VERSION$4 = '4.5.2';
   var DATA_KEY$4 = 'bs.dropdown';
   var EVENT_KEY$4 = "." + DATA_KEY$4;
   var DATA_API_KEY$4 = '.data-api';
@@ -1582,6 +1597,7 @@
       this._addEventListeners();
     } // Getters
 
+
     var _proto = Dropdown.prototype;
 
     // Public
@@ -1623,6 +1639,7 @@
         return;
       } // Disable totally Popper.js for Dropdown in Navbar
 
+
       if (!this._inNavbar && usePopper) {
         /**
          * Check for Popper dependency
@@ -1646,6 +1663,7 @@
         // to allow the menu to "escape" the scroll parent's boundaries
         // https://github.com/twbs/bootstrap/issues/24251
 
+
         if (this._config.boundary !== 'scrollParent') {
           $(parent).addClass(CLASS_NAME_POSITION_STATIC);
         }
@@ -1655,6 +1673,7 @@
       // empty mouseover listeners to the body's immediate children;
       // only needed because of broken event delegation on iOS
       // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
+
 
       if ('ontouchstart' in document.documentElement && $(parent).closest(SELECTOR_NAVBAR_NAV).length === 0) {
         $(document.body).children().on('mouseover', null, $.noop);
@@ -1869,6 +1888,7 @@
         } // If this is a touch-enabled device we remove the extra
         // empty mouseover listeners we added for iOS support
 
+
         if ('ontouchstart' in document.documentElement) {
           $(document.body).children().off('mouseover', null, $.noop);
         }
@@ -1984,6 +2004,7 @@
    * ------------------------------------------------------------------------
    */
 
+
   $(document).on(EVENT_KEYDOWN_DATA_API, SELECTOR_DATA_TOGGLE$2, Dropdown._dataApiKeydownHandler).on(EVENT_KEYDOWN_DATA_API, SELECTOR_MENU, Dropdown._dataApiKeydownHandler).on(EVENT_CLICK_DATA_API$4 + " " + EVENT_KEYUP_DATA_API, Dropdown._clearMenus).on(EVENT_CLICK_DATA_API$4, SELECTOR_DATA_TOGGLE$2, function (event) {
     event.preventDefault();
     event.stopPropagation();
@@ -2013,7 +2034,7 @@
    */
 
   var NAME$5 = 'modal';
-  var VERSION$5 = '4.5.1';
+  var VERSION$5 = '4.5.2';
   var DATA_KEY$5 = 'bs.modal';
   var EVENT_KEY$5 = "." + DATA_KEY$5;
   var DATA_API_KEY$5 = '.data-api';
@@ -2075,6 +2096,7 @@
       this._isTransitioning = false;
       this._scrollbarWidth = 0;
     } // Getters
+
 
     var _proto = Modal.prototype;
 
@@ -2574,6 +2596,7 @@
    * ------------------------------------------------------------------------
    */
 
+
   $(document).on(EVENT_CLICK_DATA_API$5, SELECTOR_DATA_TOGGLE$3, function (event) {
     var _this11 = this;
 
@@ -2621,7 +2644,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.5.1): tools/sanitizer.js
+   * Bootstrap (v4.5.2): tools/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -2747,7 +2770,7 @@
    */
 
   var NAME$6 = 'tooltip';
-  var VERSION$6 = '4.5.1';
+  var VERSION$6 = '4.5.2';
   var DATA_KEY$6 = 'bs.tooltip';
   var EVENT_KEY$6 = "." + DATA_KEY$6;
   var JQUERY_NO_CONFLICT$6 = $.fn[NAME$6];
@@ -2831,6 +2854,7 @@
         throw new TypeError('Bootstrap\'s tooltips require Popper.js (https://popper.js.org/)');
       } // private
 
+
       this._isEnabled = true;
       this._timeout = 0;
       this._hoverState = '';
@@ -2843,6 +2867,7 @@
 
       this._setListeners();
     } // Getters
+
 
     var _proto = Tooltip.prototype;
 
@@ -3441,6 +3466,7 @@
    * ------------------------------------------------------------------------
    */
 
+
   $.fn[NAME$6] = Tooltip._jQueryInterface;
   $.fn[NAME$6].Constructor = Tooltip;
 
@@ -3456,7 +3482,7 @@
    */
 
   var NAME$7 = 'popover';
-  var VERSION$7 = '4.5.1';
+  var VERSION$7 = '4.5.2';
   var DATA_KEY$7 = 'bs.popover';
   var EVENT_KEY$7 = "." + DATA_KEY$7;
   var JQUERY_NO_CONFLICT$7 = $.fn[NAME$7];
@@ -3620,6 +3646,7 @@
    * ------------------------------------------------------------------------
    */
 
+
   $.fn[NAME$7] = Popover._jQueryInterface;
   $.fn[NAME$7].Constructor = Popover;
 
@@ -3635,7 +3662,7 @@
    */
 
   var NAME$8 = 'scrollspy';
-  var VERSION$8 = '4.5.1';
+  var VERSION$8 = '4.5.2';
   var DATA_KEY$8 = 'bs.scrollspy';
   var EVENT_KEY$8 = "." + DATA_KEY$8;
   var DATA_API_KEY$6 = '.data-api';
@@ -3690,6 +3717,7 @@
 
       this._process();
     } // Getters
+
 
     var _proto = ScrollSpy.prototype;
 
@@ -3894,6 +3922,7 @@
    * ------------------------------------------------------------------------
    */
 
+
   $(window).on(EVENT_LOAD_DATA_API$2, function () {
     var scrollSpys = [].slice.call(document.querySelectorAll(SELECTOR_DATA_SPY));
     var scrollSpysLength = scrollSpys.length;
@@ -3925,7 +3954,7 @@
    */
 
   var NAME$9 = 'tab';
-  var VERSION$9 = '4.5.1';
+  var VERSION$9 = '4.5.2';
   var DATA_KEY$9 = 'bs.tab';
   var EVENT_KEY$9 = "." + DATA_KEY$9;
   var DATA_API_KEY$7 = '.data-api';
@@ -3957,6 +3986,7 @@
     function Tab(element) {
       this._element = element;
     } // Getters
+
 
     var _proto = Tab.prototype;
 
@@ -4123,6 +4153,7 @@
    * ------------------------------------------------------------------------
    */
 
+
   $(document).on(EVENT_CLICK_DATA_API$6, SELECTOR_DATA_TOGGLE$4, function (event) {
     event.preventDefault();
 
@@ -4149,7 +4180,7 @@
    */
 
   var NAME$a = 'toast';
-  var VERSION$a = '4.5.1';
+  var VERSION$a = '4.5.2';
   var DATA_KEY$a = 'bs.toast';
   var EVENT_KEY$a = "." + DATA_KEY$a;
   var JQUERY_NO_CONFLICT$a = $.fn[NAME$a];
@@ -4187,6 +4218,7 @@
 
       this._setListeners();
     } // Getters
+
 
     var _proto = Toast.prototype;
 
@@ -4350,6 +4382,7 @@
    * ------------------------------------------------------------------------
    */
 
+
   $.fn[NAME$a] = Toast._jQueryInterface;
   $.fn[NAME$a].Constructor = Toast;
 
@@ -4372,5 +4405,6 @@
   exports.Util = Util;
 
   Object.defineProperty(exports, '__esModule', { value: true });
+
 })));
 //# sourceMappingURL=bootstrap.js.map
