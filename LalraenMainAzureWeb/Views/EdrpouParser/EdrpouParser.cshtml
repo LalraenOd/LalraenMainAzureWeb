@@ -1,0 +1,46 @@
+﻿@model LalraenMainAzureWeb.Models.OrganisationModel
+
+@{
+    ViewBag.Title = "EdrpouParser";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Monobank installment calculation</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        .form-control {
+            width: auto;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-center mt-3"><strong>EdrpouParser</strong></h1>
+    @using (Html.BeginForm("EdrpouParser", "EdrpouParser", FormMethod.Post,
+        new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="text-center">
+            @Html.LabelFor(m => m.EdrpouCode,
+           new { @class = "" })
+            @Html.TextBoxFor(m => m.EdrpouCode,
+           new { @class = "form-control", @placeholder = "43285286" })
+        </div>
+        <input type="submit" class="btn btn-success mt-3" value="Find information" />
+    }
+    @using (Html.BeginForm("EdrpouParser", "EdrpouParser", FormMethod.Get,
+        new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="text-center">
+            @Html.LabelFor(m => m.MainPerson,
+           new { @class = "" })
+            @Html.TextBoxFor(m => m.MainPerson,
+           new { @class = "form-control" })
+        </div>
+    }
+</body>
+</html>

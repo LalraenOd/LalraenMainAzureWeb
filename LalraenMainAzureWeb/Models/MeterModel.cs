@@ -2,16 +2,6 @@
 {
     public class MeterModel
     {
-        public MeterModel()
-        {
-        }
-
-        public MeterModel(int lastMeters, int currentMeters)
-        {
-            LastMeters = lastMeters;
-            CurrentMeters = currentMeters;
-        }
-
         public int LastMeters { get; set; }
         public int CurrentMeters { get; set; }
         public int MetersDifference { get; set; }

@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web;
+using System.Web.Mvc;
 
 namespace LalraenMainAzureWeb.Controllers
 {
@@ -12,6 +14,8 @@ namespace LalraenMainAzureWeb.Controllers
 
         public ActionResult Main()
         {
+            var cookie = new HttpCookie("testCookie", DateTime.Now.ToString("dd.MM.yyyy"));
+            Response.SetCookie(cookie);
             return View();
         }
 
